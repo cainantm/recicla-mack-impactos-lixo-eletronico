@@ -1,10 +1,21 @@
-        document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
             const growthChartEl = document.getElementById('growthChart');
             const compositionChartEl = document.getElementById('compositionChart');
             let growthChart, compositionChart;
+            const videoCards = document.querySelectorAll('[data-video-card]');
 
             const chartFontColor = (isDark) => isDark ? '#cbd5e1' : '#4A4A4A';
             const chartGridColor = (isDark) => isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)';
+            const splitVideoTitle = (title = '') => {
+                const separators = ['—', '-', ':', '|'];
+                for (const separator of separators) {
+                    const idx = title.indexOf(separator);
+                    if (idx !== -1) {
+                        return [title.slice(0, idx).trim(), title.slice(idx + 1).trim()];
+                    }
+                }
+                return [title.trim(), ''];
+            };
 
             function createGrowthChart(isDark) {
                 if (growthChart) growthChart.destroy();
@@ -71,6 +82,13 @@
             const darkIcon = document.getElementById('theme-toggle-dark-icon');
             const lightIcon = document.getElementById('theme-toggle-light-icon');
             
+            function triggerThemeTransition() {
+                document.documentElement.classList.add('theme-transition');
+                setTimeout(() => {
+                    document.documentElement.classList.remove('theme-transition');
+                }, 600);
+            }
+
             function updateTheme(isDark) {
                 if (isDark) {
                     document.documentElement.classList.add('dark');
@@ -90,9 +108,12 @@
             const isDarkMode = () => document.documentElement.classList.contains('dark');
             updateTheme(isDarkMode());
 
-            themeToggleBtn.addEventListener('click', () => {
-                updateTheme(!isDarkMode());
-            });
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener('click', () => {
+                    triggerThemeTransition();
+                    updateTheme(!isDarkMode());
+                });
+            }
 
             // Back to Top Button
             const toTopBtn = document.getElementById('to-top-btn');
@@ -139,6 +160,27 @@
             document.querySelectorAll('[data-countup]').forEach(el => {
                 countUpObserver.observe(el);
             });
+
+            // Video cards: pull YouTube title and extract topic for description
+            if (videoCards.length) {
+                videoCards.forEach(card => {
+                    const videoLink = card.querySelector('a[href]');
+                    if (!videoLink) return;
+                    const videoUrl = videoLink.href;
+                    fetch(`https://noembed.com/embed?url=${encodeURIComponent(videoUrl)}`)
+                        .then(response => response.ok ? response.json() : Promise.reject(new Error('Metadata request failed')))
+                        .then(data => {
+                            const { title = '' } = data;
+                            if (!title) return;
+                            const [seriesTitle, topicTitle] = splitVideoTitle(title);
+                            const headingEl = card.querySelector('[data-video-heading]');
+                            const descriptionEl = card.querySelector('[data-video-description]');
+                            if (headingEl && seriesTitle) headingEl.textContent = seriesTitle;
+                            if (descriptionEl && topicTitle) descriptionEl.textContent = topicTitle;
+                        })
+                        .catch(error => console.warn('Não foi possível carregar o título do vídeo:', error));
+                });
+            }
 
             // Device Info Section
             const toxicData = {
