@@ -39,6 +39,25 @@
 
     <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 overflow-hidden">
         
+        <nav aria-label="Navegação rápida" class="mb-16">
+            <div class="bg-white/80 dark:bg-gray-800/80 border border-amber-100/50 dark:border-gray-700 rounded-2xl shadow-xl shadow-amber-900/5 dark:shadow-black/30 p-6 backdrop-blur">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-5">
+                    <h2 class="text-2xl font-semibold text-amber-900 dark:text-amber-300">Navegação rápida</h2>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Escolha um tópico para ir direto ao ponto.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                    <a href="#ciclo-de-vida" class="inline-flex items-center justify-between rounded-xl border border-amber-200/60 dark:border-gray-700 bg-amber-50/70 dark:bg-gray-900/30 px-4 py-3 text-sm font-medium text-amber-900 dark:text-amber-100 hover:bg-amber-100/70 dark:hover:bg-gray-900/60 transition-colors">Ciclo de Vida<span class="text-xs text-amber-500 dark:text-amber-300">&rarr;</span></a>
+                    <a href="#problema" class="inline-flex items-center justify-between rounded-xl border border-amber-200/60 dark:border-gray-700 bg-amber-50/70 dark:bg-gray-900/30 px-4 py-3 text-sm font-medium text-amber-900 dark:text-amber-100 hover:bg-amber-100/70 dark:hover:bg-gray-900/60 transition-colors">Problema Crescente<span class="text-xs text-amber-500 dark:text-amber-300">&rarr;</span></a>
+                    <a href="#composicao" class="inline-flex items-center justify-between rounded-xl border border-amber-200/60 dark:border-gray-700 bg-amber-50/70 dark:bg-gray-900/30 px-4 py-3 text-sm font-medium text-amber-900 dark:text-amber-100 hover:bg-amber-100/70 dark:hover:bg-gray-900/60 transition-colors">O que há no e-lixo?<span class="text-xs text-amber-500 dark:text-amber-300">&rarr;</span></a>
+                    <a href="#impactos" class="inline-flex items-center justify-between rounded-xl border border-amber-200/60 dark:border-gray-700 bg-amber-50/70 dark:bg-gray-900/30 px-4 py-3 text-sm font-medium text-amber-900 dark:text-amber-100 hover:bg-amber-100/70 dark:hover:bg-gray-900/60 transition-colors">Impactos e saúde<span class="text-xs text-amber-500 dark:text-amber-300">&rarr;</span></a>
+                    <a href="#fatos" class="inline-flex items-center justify-between rounded-xl border border-amber-200/60 dark:border-gray-700 bg-amber-50/70 dark:bg-gray-900/30 px-4 py-3 text-sm font-medium text-amber-900 dark:text-amber-100 hover:bg-amber-100/70 dark:hover:bg-gray-900/60 transition-colors">Você sabia?<span class="text-xs text-amber-500 dark:text-amber-300">&rarr;</span></a>
+                    <a href="#solucao" class="inline-flex items-center justify-between rounded-xl border border-amber-200/60 dark:border-gray-700 bg-amber-50/70 dark:bg-gray-900/30 px-4 py-3 text-sm font-medium text-amber-900 dark:text-amber-100 hover:bg-amber-100/70 dark:hover:bg-gray-900/60 transition-colors">Soluções<span class="text-xs text-amber-500 dark:text-amber-300">&rarr;</span></a>
+                    <a href="#redes" class="inline-flex items-center justify-between rounded-xl border border-amber-200/60 dark:border-gray-700 bg-amber-50/70 dark:bg-gray-900/30 px-4 py-3 text-sm font-medium text-amber-900 dark:text-amber-100 hover:bg-amber-100/70 dark:hover:bg-gray-900/60 transition-colors">Nossos parceiros<span class="text-xs text-amber-500 dark:text-amber-300">&rarr;</span></a>
+                    <a href="#fontes" class="inline-flex items-center justify-between rounded-xl border border-amber-200/60 dark:border-gray-700 bg-amber-50/70 dark:bg-gray-900/30 px-4 py-3 text-sm font-medium text-amber-900 dark:text-amber-100 hover:bg-amber-100/70 dark:hover:bg-gray-900/60 transition-colors">Fontes e links<span class="text-xs text-amber-500 dark:text-amber-300">&rarr;</span></a>
+                </div>
+            </div>
+        </nav>
+        
         <section id="ciclo-de-vida" class="mb-20">
             <h2 data-aos="fade-up" class="text-3xl font-bold text-center mb-4">O Ciclo de Vida de um Eletrônico</h2>
             <p data-aos="fade-up" data-aos-delay="100" class="text-center max-w-3xl mx-auto text-gray-600 dark:text-gray-400 mb-12">
@@ -212,66 +231,93 @@
 
     </main>
 
-    <section id="videos" class="mt-20 px-4">
-        <h2 data-aos="fade-up" class="text-3xl font-bold text-center mb-10">Vídeos sobre o Tema</h2>
-        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            <div data-aos="fade-up" data-aos-delay="100">
-                <div class="aspect-video bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center">
-                    <iframe class="w-full h-full rounded-lg shadow-lg" src="https://www.youtube.com/embed/YuG2y-e8oOQ?si=WDfS2R7MjDdQChqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+
+    <section id="redes" class="mt-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div data-aos="fade-up" class="bg-gradient-to-r from-amber-500/90 via-amber-600/90 to-amber-700/90 dark:from-amber-400/20 dark:via-amber-400/30 dark:to-amber-500/30 text-white rounded-3xl shadow-2xl shadow-amber-900/30 overflow-hidden relative p-8 space-y-8">
+                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle,_rgba(255,255,255,0.4)_1px,_transparent_1px)] [background-size:18px_18px]"></div>
+                <div class="relative space-y-8">
+                    <div class="space-y-4 max-w-3xl">
+                        <p class="uppercase tracking-[0.4em] text-sm text-white/80 dark:text-amber-200/70">Nossos parceiros</p>
+                        <h2 class="text-3xl font-bold">Rede que multiplica impacto positivo</h2>
+                        <p class="text-white/90 dark:text-amber-100/90 max-w-2xl">Conteúdo, experiência e engajamento para falar de descarte correto em todos os formatos. Fique de olho no Instagram do projeto e explore os materiais extras criados por iniciativas amigas.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-white/15 dark:bg-black/30 rounded-2xl px-8 py-6 border border-white/30 dark:border-white/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 w-full">
+                            <div class="text-left sm:flex-1 space-y-1">
+                                <p class="text-sm tracking-wide uppercase text-white/60 dark:text-amber-200/70">Instagram oficial</p>
+                                <p class="text-2xl font-semibold">@recicla_mack</p>
+                                <p class="text-white/80 dark:text-amber-100/80 text-sm">Bastidores, dicas e alertas rápidos sobre o universo do lixo eletrônico.</p>
+                            </div>
+                            <a href="https://www.instagram.com/recicla_mack/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-white text-amber-700 font-semibold px-6 py-3 rounded-full shadow-lg shadow-amber-900/20 hover:-translate-y-0.5 transition w-full sm:w-auto">
+                                Abrir no Instagram
+                                <span aria-hidden="true" class="text-lg">↗</span>
+                            </a>
+                        </div>
+                        <div class="bg-white/15 dark:bg-black/30 rounded-2xl px-8 py-6 border border-white/30 dark:border-white/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 w-full">
+                            <div class="text-left sm:flex-1 space-y-1">
+                                <p class="text-sm tracking-wide uppercase text-white/60 dark:text-amber-200/70">Site parceiro</p>
+                                <p class="text-2xl font-semibold">Ecologia Interativa</p>
+                                <p class="text-white/80 dark:text-amber-100/80 text-sm">Visite o site parceiro e experimente o jogo interativo que evidencia, na prática, o impacto das nossas escolhas tecnológicas.</p>
+                            </div>
+                            <a href="https://will1wood.github.io/siteecologia/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-white text-amber-700 font-semibold px-6 py-3 rounded-full shadow-lg shadow-amber-900/20 hover:-translate-y-0.5 transition w-full sm:w-auto">
+                                Acessar agora
+                                <span aria-hidden="true" class="text-lg">↗</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="mt-4 text-lg font-semibold">Recicla Mack — Como descartar corretamente lixo eletrônico!</h3>
-                <p class="text-gray-600 dark:text-gray-400">Neste episódio, mostramos como é possível transformar uma ação simples, o descarte correto de eletrônicos. Uma ação simples, mas de grande impacto positivo para o meio ambiente.</p>
-            </div>
-
-            <div data-aos="fade-up" data-aos-delay="200">
-                <div class="aspect-video bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center">
-                    <iframe class="w-full h-full rounded-lg shadow-lg" src="https://www.youtube.com/embed/-6Dx_tjFqE8?si=5g_-joeVp4z2Akmx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="relative pt-8 border-t border-white/20 dark:border-white/10">
+                    <h3 class="text-2xl font-semibold mb-6">Veja nossos podcasts educativos</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div data-aos="fade-up" data-aos-delay="100" data-video-card class="bg-black/20 rounded-2xl p-1">
+                            <a href="https://www.youtube.com/watch?v=-6Dx_tjFqE8" target="_blank" rel="noopener noreferrer" class="block aspect-video bg-gray-700 dark:bg-gray-800 rounded-xl shadow-lg relative group overflow-hidden" style="background-image: url('https://img.youtube.com/vi/-6Dx_tjFqE8/hqdefault.jpg'); background-size: cover; background-position: center;">
+                                <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white transition-all duration-300 group-hover:bg-black/70 p-4 text-center">
+                                    <div class="w-16 h-16 rounded-full bg-red-600/80 group-hover:bg-red-600 flex items-center justify-center text-white transition-all duration-300 group-hover:scale-110 mb-4">
+                                        <span class="text-4xl ml-1">▶</span>
+                                    </div>
+                                    <p class="font-semibold text-lg">Assistir no YouTube</p>
+                                </div>
+                            </a>
+                            <h4 class="mt-4 text-lg font-semibold" data-video-heading>Recicla Mack #1</h4>
+                            <p class="text-amber-50/90" data-video-description>Breve descrição sobre o que este vídeo aborda e os principais pontos que o espectador aprenderá.</p>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="200" data-video-card class="bg-black/20 rounded-2xl p-1">
+                            <a href="https://www.youtube.com/watch?v=dpV9Km25yLE" target="_blank" rel="noopener noreferrer" class="block aspect-video bg-gray-700 dark:bg-gray-800 rounded-xl shadow-lg relative group overflow-hidden" style="background-image: url('https://img.youtube.com/vi/dpV9Km25yLE/hqdefault.jpg'); background-size: cover; background-position: center;">
+                                <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white transition-all duration-300 group-hover:bg-black/70 p-4 text-center">
+                                    <div class="w-16 h-16 rounded-full bg-red-600/80 group-hover:bg-red-600 flex items-center justify-center text-white transition-all duração-300 group-hover:scale-110 mb-4">
+                                        <span class="text-4xl ml-1">▶</span>
+                                    </div>
+                                    <p class="font-semibold text-lg">Assistir no YouTube</p>
+                                </div>
+                            </a>
+                            <h4 class="mt-4 text-lg font-semibold" data-video-heading>Recicla Mack #2</h4>
+                            <p class="text-amber-50/90" data-video-description>Breve descrição sobre o que este vídeo aborda e os principais pontos que o espectador aprenderá.</p>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="mt-4 text-lg font-semibold">Recicla Mack #1 — O impacto ambiental do descarte incorreto de lixo eletrônico</h3>
-                <p class="text-gray-600 dark:text-gray-400">No episódio de estreia do Recicla Mack, mergulhamos no impacto do descarte incorreto de lixo eletrônico!
-
-Você sabe o que realmente acontece quando computadores, celulares e outros aparelhos antigos são jogados fora sem o devido cuidado?</p>
             </div>
-
         </div>
     </section>
 
     <section id="fontes" class="mt-20 mb-10 px-4">
         <h2 data-aos="fade-up" class="text-3xl font-bold text-center mb-10">Fontes e Links Úteis</h2>
         <div data-aos="fade-up" data-aos-delay="100" class="max-w-4xl mx-auto bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
-            <ul class="space-y-6">
+            <ul class="space-y-4 text-gray-600 dark:text-gray-400">
                 <li>
-                    <div>
-                        <strong class="font-semibold text-gray-800 dark:text-gray-200 block text-lg">Recicla Mack - Canal Youtube</strong>
-                        <p class="text-gray-600 dark:text-gray-400 mt-1">Canal de comunicação do nosso projeto com a comunidade, através de vídeos informativos e podcasts.</p>
-                    </div>
-                    <a href="https://www.youtube.com/@ReciclaMack" target="_blank" rel="noopener noreferrer" class="mt-3 inline-block bg-amber-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-amber-700 dark:bg-amber-500 dark:hover:bg-amber-600 transition-colors duration-300">Acessar Youtube</a>
+                    <strong class="font-semibold text-gray-800 dark:text-gray-200">Global E-waste Monitor:</strong> Principal fonte para os dados estatísticos apresentados na página.
+                    <a href="https://globalewaste.org/" target="_blank" rel="noopener noreferrer" class="text-amber-700 dark:text-amber-400 hover:underline ml-2 block sm:inline-block mt-1 sm:mt-0">[Acessar Relatório]</a>
                 </li>
-                <li class="pt-6 border-t border-gray-200 dark:border-gray-700">
-                    <div>
-                        <strong class="font-semibold text-gray-800 dark:text-gray-200 block text-lg">Global E-waste Monitor</strong>
-                        <p class="text-gray-600 dark:text-gray-400 mt-1">Principal fonte para os dados estatísticos apresentados na página.</p>
-                    </div>
-                    <a href="https://globalewaste.org/" target="_blank" rel="noopener noreferrer" class="mt-3 inline-block bg-amber-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-amber-700 dark:bg-amber-500 dark:hover:bg-amber-600 transition-colors duration-300">Acessar Relatório</a>
-                </li>
-                <li class="pt-6 border-t border-gray-200 dark:border-gray-700">
-                    <div>
-                        <strong class="font-semibold text-gray-800 dark:text-gray-200 block text-lg">Green Eletron</strong>
-                        <p class="text-gray-600 dark:text-gray-400 mt-1">Uma das maiores gestoras para a logística reversa de eletroeletrônicos no Brasil.</p>
-                    </div>
-                    <a href="https://greeneletron.org.br/onde-descartar/" target="_blank" rel="noopener noreferrer" class="mt-3 inline-block bg-amber-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-amber-700 dark:bg-amber-500 dark:hover:bg-amber-600 transition-colors duration-300">Encontrar Pontos de Coleta</a>
-                </li>
-                <li class="pt-6 border-t border-gray-200 dark:border-gray-700">
-                    <div>
-                        <strong class="font-semibold text-gray-800 dark:text-gray-200 block text-lg">Política Nacional de Resíduos Sólidos</strong>
-                        <p class="text-gray-600 dark:text-gray-400 mt-1">Conheça a Lei nº 12.305, que estrutura a gestão de resíduos no Brasil.</p>
-                    </div>
-                    <a href="http://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm" target="_blank" rel="noopener noreferrer" class="mt-3 inline-block bg-amber-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-amber-700 dark:bg-amber-500 dark:hover:bg-amber-600 transition-colors duration-300">Ler a Lei</a>
+                <li class="pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <strong class="font-semibold text-gray-800 dark:text-gray-200">Política Nacional de Resíduos Sólidos:</strong> Conheça a Lei nº 12.305, que estrutura a gestão de resíduos no Brasil.
+                    <a href="http://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm" target="_blank" rel="noopener noreferrer" class="text-amber-700 dark:text-amber-400 hover:underline ml-2 block sm:inline-block mt-1 sm:mt-0">[Ler a Lei]</a>
                 </li>
             </ul>
         </div>
     </section>
+
+    
 
     <footer class="bg-gray-800 dark:bg-gray-900/50 text-white text-center py-6 mt-16">
         <p class="text-gray-400">Gabriel Neman Silva |  Nicolas Gonçalves Santos |  Cainan Tomim Machado</p>
